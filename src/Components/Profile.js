@@ -1,40 +1,32 @@
 import user from '../src/refs/user.json';
-import reactDom from 'react-dom';
 
-function Profile() {
-    return <div class="profile">
-        <div class="description">
+export default function Profile() {
+    return <div className="profile">
+        <div className="description">
             <img
                 src={user.avatar}
                 alt="User avatar"
-                class="avatar"
+                className="avatar"
             />
-            <p class="name">{user.username}</p>
-            <p class="tag">{user.tag}</p>
-            <p class="location">{user.location}</p>
+            <p className="name">{user.username}</p>
+            <p className="tag">{user.tag}</p>
+            <p className="location">{user.location}</p>
         </div>
 
-        <ul class="stats">
+        <ul className="stats">
             <li>
-                <span class="label">Followers </span>
-                <span class="quantity">{user.stats.followers}</span>
+                <span className="label">Followers </span>
+                <span className="quantity">{user.stats.followers}</span>
             </li>
             <li>
-                <span class="label">Views </span>
-                <span class="quantity">{user.stats.views}</span>
+                <span className="label">Views </span>
+                <span className="quantity">{user.stats.views}</span>
             </li>
             <li>
-                <span class="label">Likes </span>
-                <span class="quantity">{user.stats.likes}</span>
+                <span className="label">Likes </span>
+                <span className="quantity">{user.stats.likes}</span>
             </li>
         </ul>
     </div>
 }
-reactDom.render(<Profile
-    username={user.username}
-    tag={user.tag}
-    location={user.location}
-    avatar={user.avatar}
-    stats={user.stats}
-/>, document.getElementById('root'))
-export default Profile
+
