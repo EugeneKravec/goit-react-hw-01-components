@@ -1,7 +1,8 @@
-import user from '../src/refs/user.json';
+import PropTypes from 'prop-types';
+import user from '../../refs/user.json';
 
 export default function Profile() {
-    return <div className="profile">
+    return (<div className="profile">
         <div className="description">
             <img
                 src={user.avatar}
@@ -27,6 +28,13 @@ export default function Profile() {
                 <span className="quantity">{user.stats.likes}</span>
             </li>
         </ul>
-    </div>
+    </div>)
 }
 
+Profile.propTypes = {
+    name: PropTypes.string.isRequired,
+    tag: PropTypes.string,
+    location: PropTypes.string,
+    avatar: PropTypes.string,
+    stats: PropTypes.objectOf(PropTypes.number),
+};
