@@ -1,10 +1,9 @@
 import reactDom from "react-dom";
 import Profile from "./components/social-profile/Profile";
 import FriendList from "./components/friend-list/FriendList";
-import user from './refs/data.json'
-import friends from './refs/friends.json'
-
-
+import user from './refs/user.json';
+import friends from './refs/friends.json';
+// import data from '/путь/к/data.json';
 
 export default function App() {
     return (
