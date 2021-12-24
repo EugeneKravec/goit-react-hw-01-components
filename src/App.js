@@ -1,7 +1,10 @@
 import reactDom from "react-dom";
+
 import Profile from "./components/social-profile/Profile";
 import FriendList from "./components/friend-list/FriendList";
 import Statistics from "./components/statistics/Statistics";
+import StatisticList from './components/statistics/StatisticList';
+
 import user from './refs/user.json';
 import friends from './refs/friends.json';
 import data from './refs/data.json';
@@ -19,10 +22,9 @@ export default function App() {
             <FriendList
                 friends={friends}
             />
-            <Statistics
-                // title="UPLOAD STATS"
-                stats={data}
-            />
+            <Statistics title="Upload stats">
+                <StatisticList stats={data} />
+            </Statistics>
         </div>
     )
 }

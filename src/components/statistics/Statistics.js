@@ -1,8 +1,11 @@
-import StatisticList from "./StatisticList"
-export default function Statistics({ title }) {
+import PropTypes from 'prop-types';
+export default function Statistics({ title, children }) {
     return <section className="statistics">
-        {{ title } && <h2 className="title">Upload stats</h2>}
-        {/* <h2 className="title">Upload stats</h2> */}
-        <StatisticList />
+        {{ title } && <h2 className="title">{title}</h2>}
+        {children}
     </section>
+}
+
+Statistics.propTypes = {
+    title: PropTypes.string
 }
